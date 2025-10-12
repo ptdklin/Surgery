@@ -11,6 +11,7 @@
             --accent-color: #ff9a3c;
             --light-color: #f5f5f5;
             --dark-color: #333;
+            --footer-color: #1a535c;
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         
@@ -60,35 +61,10 @@
             font-size: 1.8rem;
             color: var(--primary-color);
             margin-bottom: 30px;
-            text-align: center;
+            text-align: left;
             position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background-color: var(--accent-color);
-            margin: 10px auto;
-        }
-        
-        .faq-title {
-            font-size: 2.2rem;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            text-align: center;
-            position: relative;
-            font-weight: bold;
-        }
-        
-        .faq-title::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 4px;
-            background-color: var(--accent-color);
-            margin: 15px auto;
+            padding-left: 15px;
+            border-left: 4px solid var(--accent-color);
         }
         
         .content-card {
@@ -138,20 +114,20 @@
             border-radius: 10px;
             padding: 20px;
             box-shadow: var(--shadow);
-            text-align: center;
         }
         
         .visual-item h3 {
-            text-align: center;
+            text-align: left;
             margin-bottom: 20px;
             color: var(--primary-color);
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
         }
         
-        .visual-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 15px;
+        .visual-item h3 span {
+            margin-right: 10px;
+            font-size: 1.5rem;
         }
         
         .patient-path {
@@ -165,6 +141,16 @@
         
         .patient-path li {
             margin-bottom: 8px;
+        }
+        
+        .faq-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-align: left;
+            position: relative;
+            padding-left: 15px;
+            border-left: 4px solid var(--accent-color);
         }
         
         .faq-container {
@@ -218,10 +204,21 @@
         }
         
         footer {
-            background-color: var(--dark-color);
+            background: linear-gradient(135deg, var(--footer-color), var(--primary-color));
             color: white;
             text-align: center;
-            padding: 30px 0;
+            padding: 40px 0;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        .footer-info {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
         }
         
         @media (max-width: 768px) {
@@ -229,16 +226,20 @@
                 font-size: 2rem;
             }
             
-            .section-title {
+            .section-title, .faq-title {
                 font-size: 1.5rem;
-            }
-            
-            .faq-title {
-                font-size: 1.8rem;
             }
             
             .content-card {
                 padding: 20px;
+            }
+            
+            .visual-section {
+                flex-direction: column;
+            }
+            
+            .visual-item {
+                min-width: 100%;
             }
         }
     </style>
@@ -254,7 +255,7 @@
     <section>
         <div class="container">
             <div class="content-card">
-                <h3><span>🟢</span> 1. Вступление — первое впечатление</h3>
+                <h3><span>🌟</span> 1. Вступление — первое впечатление</h3>
                 <p>Туберкулёз лечится. Современно, эффективно и под контролем специалистов.</p>
                 <p>Иногда лекарства полностью справляются с инфекцией.</p>
                 <p>А иногда — лучший результат достигается, если помочь организму хирургическим путём.</p>
@@ -311,11 +312,11 @@
     
     <section style="background-color: var(--light-color);">
         <div class="container">
-            <h2 class="section-title">🖼️ 8. Визуальные подсказки</h2>
+            <h2 class="section-title">📊 Визуальные подсказки</h2>
             
             <div class="visual-section">
                 <div class="visual-item">
-                    <h3>До / После:</h3>
+                    <h3><span>🔄</span> До / После</h3>
                     <div style="display: flex; flex-direction: column; gap: 15px;">
                         <div>
                             <div style="background-color: #ffcccc; padding: 15px; border-radius: 5px;">
@@ -333,16 +334,16 @@
                 </div>
                 
                 <div class="visual-item">
-                    <h3>Путь пациента:</h3>
+                    <h3><span>🏥</span> Путь пациента</h3>
                     <div class="patient-path" style="display: flex; flex-direction: column; gap: 10px;">
                         <div style="background-color: #e6f7ff; padding: 15px; border-radius: 5px;">
-                            <p><strong>Этапы:</strong></p>
+                            <p><strong>Этапы лечения:</strong></p>
                             <ul style="margin-top: 10px;">
-                                <li>выявление</li>
-                                <li>консультация</li>
-                                <li>решение</li>
-                                <li>операция (если показана)</li>
-                                <li>выздоровление</li>
+                                <li>Выявление заболевания</li>
+                                <li>Консультация фтизиатра</li>
+                                <li>Решение о необходимости операции</li>
+                                <li>Хирургическое вмешательство (если показана)</li>
+                                <li>Полное выздоровление</li>
                             </ul>
                             <p style="margin-top: 10px; font-style: italic;">При наведении на каждый этап появляется короткое пояснение.</p>
                         </div>
@@ -350,13 +351,15 @@
                 </div>
                 
                 <div class="visual-item">
-                    <h3>Отзывы:</h3>
+                    <h3><span>💭</span> Отзывы пациентов</h3>
                     <div style="display: flex; flex-direction: column; gap: 15px;">
                         <div style="background-color: #fff4e6; padding: 15px; border-radius: 5px;">
                             <p style="font-style: italic;">«Я боялся операции, но теперь дышу свободно и живу без лекарств.»</p>
+                            <p style="margin-top: 10px; text-align: right; font-size: 0.9em;">— Александр, 42 года</p>
                         </div>
                         <div style="background-color: #fff4e6; padding: 15px; border-radius: 5px;">
                             <p style="font-style: italic;">«После операции я снова смог гулять с детьми, не задыхаясь.»</p>
+                            <p style="margin-top: 10px; text-align: right; font-size: 0.9em;">— Мария, 38 лет</p>
                         </div>
                     </div>
                 </div>
@@ -409,7 +412,9 @@
     
     <footer>
         <div class="container">
-            <p>Информация о хирургическом лечении туберкулёза</p>
+            <p><strong>Хирургическое лечение туберкулёза</strong></p>
+            <p class="footer-info">Данный материал предоставляет информацию о возможностях хирургического лечения туберкулёза и предназначен для пациентов, впервые выявленных с этим заболеванием.</p>
+            <p class="footer-info">Проконсультируйтесь с вашим лечащим врачом для получения индивидуальных рекомендаций.</p>
         </div>
     </footer>
     
