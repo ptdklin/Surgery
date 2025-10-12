@@ -48,7 +48,7 @@
         }
         
         header p {
-            font-size: 1.3rem; /* Увеличено с 1.2rem */
+            font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -58,7 +58,7 @@
         }
         
         .section-title {
-            font-size: 2rem; /* Увеличено с 1.8rem */
+            font-size: 1.8rem;
             color: var(--primary-color);
             margin-bottom: 30px;
             text-align: left;
@@ -85,17 +85,15 @@
             margin-bottom: 15px;
             display: flex;
             align-items: center;
-            font-size: 1.4rem; /* Добавлено увеличение размера */
         }
         
         .content-card h3 span {
             margin-right: 10px;
-            font-size: 1.6rem; /* Увеличено с 1.5rem */
+            font-size: 1.5rem;
         }
         
         .content-card p {
             margin-bottom: 1.2em;
-            font-size: 1.1rem; /* Добавлено увеличение размера */
         }
         
         .content-card p:last-child {
@@ -125,12 +123,11 @@
             padding-left: 10px;
             display: flex;
             align-items: center;
-            font-size: 1.4rem; /* Добавлено увеличение размера */
         }
         
         .visual-item h3 span {
             margin-right: 10px;
-            font-size: 1.6rem; /* Увеличено с 1.5rem */
+            font-size: 1.5rem;
         }
         
         .patient-path {
@@ -144,11 +141,10 @@
         
         .patient-path li {
             margin-bottom: 8px;
-            font-size: 1.1rem; /* Добавлено увеличение размера */
         }
         
         .faq-title {
-            font-size: 2rem; /* Увеличено с 1.8rem */
+            font-size: 1.8rem;
             color: var(--primary-color);
             margin-bottom: 30px;
             text-align: left;
@@ -178,7 +174,6 @@
             justify-content: space-between;
             align-items: center;
             transition: background-color 0.3s;
-            font-size: 1.2rem; /* Добавлено увеличение размера */
         }
         
         .faq-question:hover {
@@ -187,7 +182,7 @@
         
         .faq-question::after {
             content: '+';
-            font-size: 1.6rem; /* Увеличено с 1.5rem */
+            font-size: 1.5rem;
             transition: transform 0.3s;
         }
         
@@ -206,10 +201,6 @@
         .faq-answer.active {
             padding: 20px;
             max-height: 500px;
-        }
-        
-        .faq-answer p {
-            font-size: 1.1rem; /* Добавлено увеличение размера */
         }
         
         footer {
@@ -236,11 +227,14 @@
             }
             
             .section-title, .faq-title {
-                font-size: 1.7rem; /* Увеличено с 1.5rem */
+                font-size: 1.5rem;
             }
             
             .content-card {
                 padding: 20px;
+                margin-left: 0;
+                margin-right: 0;
+                border-radius: 0;
             }
             
             .visual-section {
@@ -249,6 +243,26 @@
             
             .visual-item {
                 min-width: 100%;
+                border-radius: 0;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
+            .container {
+                padding: 0;
+            }
+            
+            section {
+                padding: 40px 0;
+            }
+            
+            .faq-container {
+                max-width: 100%;
+            }
+            
+            .faq-item {
+                border-radius: 0;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -421,7 +435,7 @@
     
     <footer>
         <div class="container">
-            <!-- Удалена строка с заголовком "Хирургическое лечение туберкулёза" -->
+            <p><strong>Хирургическое лечение туберкулёза</strong></p>
             <p class="footer-info">Данный материал предоставляет информацию о возможностях хирургического лечения туберкулёза и предназначен для пациентов, впервые выявленных с этим заболеванием.</p>
             <p class="footer-info">Проконсультируйтесь с вашим лечащим врачом для получения индивидуальных рекомендаций.</p>
         </div>
