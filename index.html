@@ -30,9 +30,9 @@
         }
         
         .container {
-            max-width: 1400px;
+            max-width: 1800px; /* Увеличена максимальная ширина */
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 20px; /* Уменьшены боковые отступы для большего пространства */
         }
         
         header {
@@ -45,13 +45,15 @@
         
         header h1 {
             font-size: 3.2rem;
-            margin-bottom: 20px;
+            margin-bottom: 10px; /* Уменьшен отступ снизу */
+            line-height: 1.2; /* Уменьшен межстрочный интервал */
         }
         
         header p {
             font-size: 1.6rem;
             max-width: 900px;
             margin: 0 auto;
+            line-height: 1.3; /* Уменьшен межстрочный интервал */
         }
         
         section {
@@ -66,6 +68,7 @@
             position: relative;
             padding-left: 20px;
             border-left: 5px solid var(--accent-color);
+            line-height: 1.2; /* Уменьшен межстрочный интервал */
         }
         
         .content-card {
@@ -75,6 +78,7 @@
             margin-bottom: 35px;
             box-shadow: var(--shadow);
             transition: transform 0.3s ease;
+            max-width: 100%; /* Убрано ограничение по ширине */
         }
         
         .content-card:hover {
@@ -87,6 +91,7 @@
             display: flex;
             align-items: center;
             font-size: 1.7rem;
+            line-height: 1.2; /* Уменьшен межстрочный интервал */
         }
         
         .content-card h3 span {
@@ -117,6 +122,7 @@
             border-radius: 12px;
             padding: 25px;
             box-shadow: var(--shadow);
+            max-width: 100%; /* Убрано ограничение по ширине */
         }
         
         .visual-item h3 {
@@ -127,6 +133,7 @@
             display: flex;
             align-items: center;
             font-size: 1.7rem;
+            line-height: 1.2; /* Уменьшен межстрочный интервал */
         }
         
         .visual-item h3 span {
@@ -142,10 +149,11 @@
             position: relative;
             padding-left: 20px;
             border-left: 5px solid var(--accent-color);
+            line-height: 1.2; /* Уменьшен межстрочный интервал */
         }
         
         .faq-container {
-            max-width: 900px;
+            max-width: 100%; /* Убрано ограничение по ширине */
             margin: 0 auto;
         }
         
@@ -166,6 +174,7 @@
             align-items: center;
             transition: background-color 0.3s;
             font-size: 1.4rem;
+            line-height: 1.2; /* Уменьшен межстрочный интервал */
         }
         
         .faq-question:hover {
@@ -203,7 +212,7 @@
         }
         
         .quiz-container {
-            max-width: 900px;
+            max-width: 100%; /* Убрано ограничение по ширине */
             margin: 0 auto;
         }
         
@@ -225,6 +234,7 @@
             color: var(--primary-color);
             margin-bottom: 25px;
             font-weight: 600;
+            line-height: 1.2; /* Уменьшен межстрочный интервал */
         }
         
         .quiz-options {
@@ -326,13 +336,13 @@
             position: absolute;
             top: 15px;
             right: 15px;
-            width: 30px;
-            height: 30px;
+            width: 40px; /* Увеличен размер крестика */
+            height: 40px; /* Увеличен размер крестика */
             border-radius: 50%;
             background-color: var(--primary-color);
             color: white;
             border: none;
-            font-size: 1.2rem;
+            font-size: 1.5rem; /* Увеличен размер шрифта */
             cursor: pointer;
             display: flex;
             justify-content: center;
@@ -348,6 +358,7 @@
             color: var(--primary-color);
             margin-bottom: 20px;
             font-size: 1.5rem;
+            line-height: 1.2; /* Уменьшен межстрочный интервал */
         }
         
         .modal-explanation {
@@ -369,7 +380,7 @@
         }
         
         .questions-container {
-            max-width: 1100px;
+            max-width: 100%; /* Убрано ограничение по ширине */
             margin: 0 auto;
         }
         
@@ -390,6 +401,7 @@
             align-items: center;
             transition: background-color 0.3s;
             font-size: 1.5rem;
+            line-height: 1.2; /* Уменьшен межстрочный интервал */
         }
         
         .questions-category-header:hover {
@@ -442,6 +454,7 @@
             color: var(--primary-color);
             margin-bottom: 12px;
             font-size: 1.5rem;
+            line-height: 1.2; /* Уменьшен межстрочный интервал */
         }
         
         .patient-tip p {
@@ -458,6 +471,7 @@
         footer p {
             margin-bottom: 12px;
             font-size: 1.2rem;
+            line-height: 1.2; /* Уменьшен межстрочный интервал */
         }
         
         .footer-info {
@@ -808,7 +822,7 @@
         <footer>
             <div class="container">
                 <p><strong>Хирургическое лечение туберкулёза</strong></p>
-                <p class="footer-info">Данный материал предоставляет предварительную информацию пациентам о возможностях хирургического лечения туберкулёза.</p>
+                <p class="footer-info">Данный материал предоставляет пациентам предварительную информацию о возможностях хирургического лечения туберкулёза.</p>
                 <p class="footer-info">Проконсультируйтесь с вашим лечащим врачом для получения индивидуальных рекомендаций.</p>
             </div>
         </footer>
@@ -818,7 +832,7 @@
     <div class="modal-overlay" id="explanation-modal">
         <div class="modal-content">
             <button class="close-modal" id="close-modal">×</button>
-            <h3 class="modal-title">Объяснение</h3>
+            <h3 class="modal-title" id="modal-title">Правильный ответ А</h3>
             <div class="modal-explanation" id="modal-explanation-content">
                 <!-- Содержимое будет заполняться динамически -->
             </div>
@@ -853,73 +867,93 @@
             const quizItems = document.querySelectorAll('.quiz-item');
             const modal = document.getElementById('explanation-modal');
             const closeModal = document.getElementById('close-modal');
+            const modalTitle = document.getElementById('modal-title');
             const modalContent = document.getElementById('modal-explanation-content');
-            const contentAfterQuiz = document.querySelector('.content-after-quiz');
-            let currentQuestionIndex = 0;
             
             // Объект с объяснениями для каждого вопроса
             const explanations = {
-                1: "<p><strong>Правильный ответ — A.</strong> Хирургическое лечение применяется, если медикаментозная терапия не обеспечивает полного выздоровления. Удаление очага болезни помогает достичь излечения и снизить риск повторного заболевания, но препараты остаются обязательными.</p>",
-                2: "<p><strong>Правильный ответ — A.</strong> Удаление очага облегчает лечение и иногда позволяет уменьшить длительность курса препаратов. Полностью прекращать приём лекарств нельзя — это необходимо для закрепления эффекта и предотвращения рецидива.</p>",
-                3: "<p><strong>Правильный ответ — A.</strong> Удаление очага не восстанавливает лёгкое мгновенно, функции остаются частично ограниченными, особенно если удалено значительное количество ткани.</p>",
-                4: "<p><strong>Правильный ответ — A.</strong> Операция удаляет очаг болезни, повышает вероятность полного излечения, снижает риск повторного заражения и иногда позволяет сократить курс лечения. Лёгкое не восстанавливается мгновенно, а препараты остаются обязательными для полного выздоровления.</p>"
+                1: "Хирургическое лечение предлагается для достижения полного излечения и снижения риска рецидива туберкулёза. Это особенно важно при устойчивых формах заболевания или при наличии остаточных изменений в лёгких, которые могут поддерживать инфекцию.",
+                2: "Операция не заменяет полностью противотуберкулёзную терапию, но в ряде случаев позволяет сократить курс лечения, так как удаляется основной очаг инфекции.",
+                3: "После удаления очага туберкулёза убирается разрушенная ткань, которая не участвует в дыхании, но может быть источником инфекции. Это позволяет здоровой ткани лёгкого лучше функционировать.",
+                4: "После операции пациент получает несколько преимуществ: убирается очаг болезни, значительно повышается вероятность полного излечения, снижается риск рецидива, а курс лечения может быть короче. Однако важно продолжать принимать препараты по назначению врача до завершения полного курса терапии."
             };
             
             // Обработчики для вариантов ответов
             document.querySelectorAll('.quiz-option').forEach(option => {
                 option.addEventListener('click', function() {
-                    if (this.closest('.quiz-item').classList.contains('active')) {
-                        const quizItem = this.closest('.quiz-item');
-                        const isCorrect = this.getAttribute('data-correct') === 'true';
-                        
-                        // Снимаем выделение с других вариантов в этом вопросе
-                        quizItem.querySelectorAll('.quiz-option').forEach(opt => {
-                            opt.classList.remove('selected', 'correct', 'incorrect');
-                        });
-                        
-                        // Выделяем выбранный вариант
-                        this.classList.add('selected');
-                        
-                        // Показываем правильность ответа
-                        if (isCorrect) {
-                            this.classList.add('correct');
+                    const quizItem = this.closest('.quiz-item');
+                    const options = quizItem.querySelectorAll('.quiz-option');
+                    
+                    // Сбрасываем все варианты
+                    options.forEach(opt => {
+                        opt.classList.remove('selected', 'correct', 'incorrect');
+                    });
+                    
+                    // Отмечаем выбранный вариант
+                    this.classList.add('selected');
+                    
+                    // Проверяем правильность ответа
+                    const isCorrect = this.getAttribute('data-correct') === 'true';
+                    
+                    if (isCorrect) {
+                        this.classList.add('correct');
+                    } else {
+                        this.classList.add('incorrect');
+                        // Показываем правильный ответ
+                        const correctOption = quizItem.querySelector('.quiz-option[data-correct="true"]');
+                        correctOption.classList.add('correct');
+                    }
+                    
+                    // Получаем ID текущего вопроса
+                    const quizId = quizItem.id.split('-')[1];
+                    
+                    // Заполняем модальное окно
+                    modalTitle.textContent = "Правильный ответ А";
+                    modalContent.textContent = explanations[quizId];
+                    
+                    // Показываем модальное окно
+                    modal.classList.add('active');
+                    
+                    // Автоматически переходим к следующему вопросу через 3 секунды
+                    setTimeout(() => {
+                        if (quizId < 4) {
+                            // Скрываем текущий вопрос
+                            quizItem.classList.remove('active');
+                            
+                            // Показываем следующий вопрос
+                            const nextQuiz = document.getElementById(`quiz-${parseInt(quizId) + 1}`);
+                            nextQuiz.classList.add('active');
+                            
+                            // Прокручиваем к следующему вопросу
+                            nextQuiz.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         } else {
-                            this.classList.add('incorrect');
-                            // Показываем правильный ответ
-                            quizItem.querySelector('.quiz-option[data-correct="true"]').classList.add('correct');
+                            // После последнего вопроса показываем скрытый контент
+                            document.querySelector('.content-after-quiz').classList.add('visible');
+                            document.querySelector('.content-after-quiz').scrollIntoView({ behavior: 'smooth' });
                         }
                         
-                        // Показываем модальное окно с объяснением
-                        const questionId = quizItem.id.split('-')[1];
-                        modalContent.innerHTML = explanations[questionId];
-                        modal.classList.add('active');
-                    }
+                        // Закрываем модальное окно
+                        modal.classList.remove('active');
+                    }, 3000);
                 });
             });
             
-            // Обработчик закрытия модального окна
+            // Закрытие модального окна
             closeModal.addEventListener('click', function() {
                 modal.classList.remove('active');
-                
-                // Переходим к следующему вопросу
-                if (currentQuestionIndex < quizItems.length - 1) {
-                    quizItems[currentQuestionIndex].classList.remove('active');
-                    currentQuestionIndex++;
-                    quizItems[currentQuestionIndex].classList.add('active');
-                } else {
-                    // Если это был последний вопрос, показываем весь остальной контент
-                    contentAfterQuiz.classList.add('visible');
-                    // Прокручиваем к началу показанного контента
-                    contentAfterQuiz.scrollIntoView({ 
-                        behavior: 'smooth' 
-                    });
+            });
+            
+            // Закрытие модального окна при клике вне его
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
                 }
             });
             
-            // Функционал для листа вопросов хирургу
-            const questionHeaders = document.querySelectorAll('.questions-category-header');
+            // Функционал для блока "Вопросы для хирурга"
+            const categoryHeaders = document.querySelectorAll('.questions-category-header');
             
-            questionHeaders.forEach(header => {
+            categoryHeaders.forEach(header => {
                 header.addEventListener('click', function() {
                     const list = this.nextElementSibling;
                     const isActive = this.classList.contains('active');
@@ -930,7 +964,7 @@
                         item.nextElementSibling.classList.remove('active');
                     });
                     
-                    // Если текущий заголовок не был активен, открываем его
+                    // Если текущий заголовок не был активен, открываем его список
                     if (!isActive) {
                         this.classList.add('active');
                         list.classList.add('active');
