@@ -26,53 +26,53 @@
             background-color: #f9f9f9;
             color: var(--dark-color);
             line-height: 1.6;
-            font-size: 1.1rem; /* Увеличен базовый размер шрифта */
+            font-size: 1.2rem; /* Еще увеличен базовый размер шрифта */
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px; /* Увеличена максимальная ширина */
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px; /* Увеличены боковые отступы */
         }
         
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
-            padding: 60px 0;
+            padding: 70px 0; /* Увеличено внутреннее пространство */
             text-align: center;
             box-shadow: var(--shadow);
         }
         
         header h1 {
-            font-size: 2.8rem; /* Увеличен на один шаг */
-            margin-bottom: 15px;
+            font-size: 3.2rem; /* Еще увеличен на один шаг */
+            margin-bottom: 20px;
         }
         
         header p {
-            font-size: 1.4rem; /* Увеличен на один шаг */
-            max-width: 800px;
+            font-size: 1.6rem; /* Еще увеличен на один шаг */
+            max-width: 900px;
             margin: 0 auto;
         }
         
         section {
-            padding: 60px 0;
+            padding: 70px 0; /* Увеличено внутреннее пространство */
         }
         
         .section-title {
-            font-size: 2.1rem; /* Увеличен на один шаг */
+            font-size: 2.4rem; /* Еще увеличен на один шаг */
             color: var(--primary-color);
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             text-align: left;
             position: relative;
-            padding-left: 15px;
-            border-left: 4px solid var(--accent-color);
+            padding-left: 20px;
+            border-left: 5px solid var(--accent-color);
         }
         
         .content-card {
             background-color: white;
-            border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 30px;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 35px;
             box-shadow: var(--shadow);
             transition: transform 0.3s ease;
         }
@@ -83,20 +83,20 @@
         
         .content-card h3 {
             color: var(--primary-color);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
-            font-size: 1.5rem; /* Увеличен на один шаг */
+            font-size: 1.7rem; /* Еще увеличен на один шаг */
         }
         
         .content-card h3 span {
-            margin-right: 10px;
-            font-size: 1.7rem; /* Увеличен на один шаг */
+            margin-right: 12px;
+            font-size: 1.9rem; /* Еще увеличен на один шаг */
         }
         
         .content-card p {
-            margin-bottom: 1.2em;
-            font-size: 1.1rem; /* Увеличен на один шаг */
+            margin-bottom: 1.3em;
+            font-size: 1.2rem; /* Еще увеличен на один шаг */
         }
         
         .content-card p:last-child {
@@ -106,66 +106,52 @@
         .visual-section {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 35px;
             justify-content: center;
         }
         
         .visual-item {
             flex: 1;
-            min-width: 300px;
+            min-width: 350px;
             background-color: white;
-            border-radius: 10px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 25px;
             box-shadow: var(--shadow);
         }
         
         .visual-item h3 {
             text-align: left;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             color: var(--primary-color);
-            padding-left: 10px;
+            padding-left: 12px;
             display: flex;
             align-items: center;
-            font-size: 1.5rem; /* Увеличен на один шаг */
+            font-size: 1.7rem; /* Еще увеличен на один шаг */
         }
         
         .visual-item h3 span {
-            margin-right: 10px;
-            font-size: 1.7rem; /* Увеличен на один шаг */
-        }
-        
-        .patient-path {
-            text-align: left;
-        }
-        
-        .patient-path ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-        
-        .patient-path li {
-            margin-bottom: 8px;
-            font-size: 1.1rem; /* Увеличен на один шаг */
+            margin-right: 12px;
+            font-size: 1.9rem; /* Еще увеличен на один шаг */
         }
         
         .faq-title {
-            font-size: 2.1rem; /* Увеличен на один шаг */
+            font-size: 2.4rem; /* Еще увеличен на один шаг */
             color: var(--primary-color);
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             text-align: left;
             position: relative;
-            padding-left: 15px;
-            border-left: 4px solid var(--accent-color);
+            padding-left: 20px;
+            border-left: 5px solid var(--accent-color);
         }
         
         .faq-container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
         
         .faq-item {
-            margin-bottom: 15px;
-            border-radius: 8px;
+            margin-bottom: 20px;
+            border-radius: 10px;
             overflow: hidden;
             box-shadow: var(--shadow);
         }
@@ -173,13 +159,13 @@
         .faq-question {
             background-color: var(--primary-color);
             color: white;
-            padding: 15px 20px;
+            padding: 20px 25px;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
             transition: background-color 0.3s;
-            font-size: 1.2rem; /* Увеличен на один шаг */
+            font-size: 1.4rem; /* Еще увеличен на один шаг */
         }
         
         .faq-question:hover {
@@ -188,7 +174,7 @@
         
         .faq-question::after {
             content: '+';
-            font-size: 1.7rem; /* Увеличен на один шаг */
+            font-size: 1.9rem; /* Еще увеличен на один шаг */
             transition: transform 0.3s;
         }
         
@@ -198,15 +184,15 @@
         
         .faq-answer {
             background-color: white;
-            padding: 0 20px;
+            padding: 0 25px;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease, padding 0.3s ease;
-            font-size: 1.1rem; /* Увеличен на один шаг */
+            font-size: 1.2rem; /* Еще увеличен на один шаг */
         }
         
         .faq-answer.active {
-            padding: 20px;
+            padding: 25px;
             max-height: 500px;
         }
         
@@ -216,41 +202,41 @@
         }
         
         .quiz-container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
         
         .quiz-item {
             background-color: white;
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 25px;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
             box-shadow: var(--shadow);
         }
         
         .quiz-question {
-            font-size: 1.4rem; /* Увеличен на один шаг */
+            font-size: 1.6rem; /* Еще увеличен на один шаг */
             color: var(--primary-color);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-weight: 600;
         }
         
         .quiz-options {
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            margin-bottom: 20px;
+            gap: 15px;
+            margin-bottom: 25px;
         }
         
         .quiz-option {
             display: flex;
             align-items: flex-start;
-            padding: 12px 15px;
+            padding: 15px 20px;
             border: 1px solid #ddd;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
             transition: all 0.2s ease;
-            font-size: 1.1rem; /* Увеличен на один шаг */
+            font-size: 1.2rem; /* Еще увеличен на один шаг */
         }
         
         .quiz-option:hover {
@@ -274,15 +260,15 @@
         
         .option-letter {
             display: inline-block;
-            width: 25px;
-            height: 25px;
+            width: 28px;
+            height: 28px;
             background-color: #eee;
             border-radius: 50%;
             text-align: center;
-            line-height: 25px;
-            margin-right: 10px;
+            line-height: 28px;
+            margin-right: 12px;
             flex-shrink: 0;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
         
         .quiz-option.selected .option-letter {
@@ -301,12 +287,12 @@
         }
         
         .explanation {
-            padding: 15px;
+            padding: 18px;
             background-color: #f9f9f9;
-            border-radius: 5px;
-            margin-top: 15px;
+            border-radius: 8px;
+            margin-top: 18px;
             display: none;
-            font-size: 1.1rem; /* Увеличен на один шаг */
+            font-size: 1.2rem; /* Еще увеличен на один шаг */
         }
         
         .explanation.show {
@@ -319,13 +305,13 @@
         }
         
         .questions-container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         
         .questions-category {
-            margin-bottom: 15px;
-            border-radius: 8px;
+            margin-bottom: 20px;
+            border-radius: 10px;
             overflow: hidden;
             box-shadow: var(--shadow);
         }
@@ -333,13 +319,13 @@
         .questions-category-header {
             background-color: var(--primary-color);
             color: white;
-            padding: 15px 20px;
+            padding: 18px 25px;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
             transition: background-color 0.3s;
-            font-size: 1.3rem; /* Увеличен на один шаг */
+            font-size: 1.5rem; /* Еще увеличен на один шаг */
         }
         
         .questions-category-header:hover {
@@ -348,7 +334,7 @@
         
         .questions-category-header::after {
             content: '+';
-            font-size: 1.7rem; /* Увеличен на один шаг */
+            font-size: 1.9rem; /* Еще увеличен на один шаг */
             transition: transform 0.3s;
         }
         
@@ -358,7 +344,7 @@
         
         .questions-list {
             background-color: white;
-            padding: 0 20px;
+            padding: 0 25px;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease, padding 0.3s ease;
@@ -366,14 +352,14 @@
         }
         
         .questions-list.active {
-            padding: 20px;
+            padding: 25px;
             max-height: 1000px;
         }
         
         .questions-list li {
-            padding: 12px 0;
+            padding: 15px 0;
             border-bottom: 1px solid #eee;
-            font-size: 1.1rem; /* Увеличен на один шаг */
+            font-size: 1.2rem; /* Еще увеличен на один шаг */
         }
         
         .questions-list li:last-child {
@@ -382,48 +368,48 @@
         
         .patient-tip {
             background-color: #fff9e6;
-            border-left: 4px solid var(--accent-color);
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 30px;
+            border-left: 5px solid var(--accent-color);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 35px;
         }
         
         .patient-tip h4 {
             color: var(--primary-color);
-            margin-bottom: 10px;
-            font-size: 1.3rem; /* Увеличен на один шаг */
+            margin-bottom: 12px;
+            font-size: 1.5rem; /* Еще увеличен на один шаг */
         }
         
         .patient-tip p {
-            font-size: 1.1rem; /* Увеличен на один шаг */
+            font-size: 1.2rem; /* Еще увеличен на один шаг */
         }
         
         footer {
             background: linear-gradient(135deg, var(--footer-color), var(--primary-color));
             color: white;
             text-align: center;
-            padding: 40px 0;
+            padding: 50px 0;
         }
         
         footer p {
-            margin-bottom: 10px;
-            font-size: 1.1rem; /* Увеличен на один шаг */
+            margin-bottom: 12px;
+            font-size: 1.2rem; /* Еще увеличен на один шаг */
         }
         
         .footer-info {
-            font-size: 1rem; /* Увеличен на один шаг */
+            font-size: 1.1rem; /* Еще увеличен на один шаг */
             opacity: 0.8;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
         }
         
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.3rem; /* Увеличен на один шаг */
+                font-size: 2.6rem; /* Еще увеличен на один шаг */
             }
             
             .section-title, .faq-title {
-                font-size: 1.8rem; /* Увеличен на один шаг */
+                font-size: 2.1rem; /* Еще увеличен на один шаг */
             }
             
             .content-card {
@@ -441,7 +427,7 @@
             }
             
             .container {
-                padding: 0 15px;
+                padding: 0 20px;
             }
             
             .faq-container {
@@ -507,7 +493,7 @@
             </div>
             
             <div class="content-card">
-                <h3><span>💭</span> 7. Что важно помнить</h3>
+                <h3><span>💬</span> 7. Что важно помнить</h3>
                 <p>Когда врач говорит «операция», это не приговор — это путь к выздоровлению.</p>
                 <p>Такой шаг уже помог тысячам пациентов полностью избавиться от болезни.</p>
                 <p>Слово «операция» — это не страх, а шанс. Шанс жить без туберкулёза.</p>
@@ -523,15 +509,15 @@
             <div class="visual-section">
                 <div class="visual-item">
                     <h3><span>🔄</span> До / После</h3>
-                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <div style="display: flex; flex-direction: column; gap: 18px;">
                         <div>
-                            <div style="background-color: #ffcccc; padding: 15px; border-radius: 5px;">
+                            <div style="background-color: #ffcccc; padding: 18px; border-radius: 8px;">
                                 <p><strong>До:</strong> лёгкое с каверной</p>
                                 <p style="font-style: italic;">«Здесь живёт очаг болезни»</p>
                             </div>
                         </div>
                         <div>
-                            <div style="background-color: #ccffcc; padding: 15px; border-radius: 5px;">
+                            <div style="background-color: #ccffcc; padding: 18px; border-radius: 8px;">
                                 <p><strong>После:</strong> здоровая ткань</p>
                                 <p style="font-style: italic;">«Очаг удалён — лёгкое дышит свободно»</p>
                             </div>
@@ -540,36 +526,19 @@
                 </div>
                 
                 <div class="visual-item">
-                    <h3><span>🏥</span> Путь пациента</h3>
-                    <div class="patient-path" style="display: flex; flex-direction: column; gap: 10px;">
-                        <div style="background-color: #e6f7ff; padding: 15px; border-radius: 5px;">
-                            <p><strong>Этапы лечения:</strong></p>
-                            <ul style="margin-top: 10px;">
-                                <li>Выявление заболевания</li>
-                                <li>Консультация фтизиатра</li>
-                                <li>Решение о необходимости операции</li>
-                                <li>Хирургическое вмешательство (если показана)</li>
-                                <li>Полное выздровление</li>
-                            </ul>
-                            <p style="margin-top: 10px; font-style: italic;">При наведении на каждый этап появляется короткое пояснение.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="visual-item">
-                    <h3><span>💬</span> Отзывы пациентов</h3>
-                    <div style="display: flex; flex-direction: column; gap: 15px;">
-                        <div style="background-color: #fff4e6; padding: 15px; border-radius: 5px;">
+                    <h3><span>💭</span> Отзывы пациентов</h3>
+                    <div style="display: flex; flex-direction: column; gap: 18px;">
+                        <div style="background-color: #fff4e6; padding: 18px; border-radius: 8px;">
                             <p style="font-style: italic;">«Я боялся операции, но теперь дышу свободно и живу без лекарств.»</p>
-                            <p style="margin-top: 10px; text-align: right; font-size: 0.95em;">— Александр, 42 года</p>
+                            <p style="margin-top: 12px; text-align: right; font-size: 1.05em;">— Александр, 42 года</p>
                         </div>
-                        <div style="background-color: #fff4e6; padding: 15px; border-radius: 5px;">
-                            <p style="font-style: italic;">«После операции я снова смог гулять с детьми, не задыхаясь.»</p>
-                            <p style="margin-top: 10px; text-align: right; font-size: 0.95em;">— Мария, 38 лет</p>
+                        <div style="background-color: #fff4e6; padding: 18px; border-radius: 8px;">
+                            <p style="font-style: italic;">«После операции я снова смогла гулять с детьми, не задыхаясь.»</p>
+                            <p style="margin-top: 12px; text-align: right; font-size: 1.05em;">— Мария, 38 лет</p>
                         </div>
-                        <div style="background-color: #fff4e6; padding: 15px; border-radius: 5px;">
+                        <div style="background-color: #fff4e6; padding: 18px; border-radius: 8px;">
                             <p style="font-style: italic;">«Я счастлива, что наконец-то избавилась от этой болезни. Если бы не операция, эти остатки туберкулёза всегда были бы во мне, напоминая о болезни. Теперь я могу жить, не думая об этом.»</p>
-                            <p style="margin-top: 10px; text-align: right; font-size: 0.95em;">— Елена, 45 лет</p>
+                            <p style="margin-top: 12px; text-align: right; font-size: 1.05em;">— Елена, 45 лет</p>
                         </div>
                     </div>
                 </div>
@@ -623,7 +592,7 @@
     <!-- Новый блок тестирования -->
     <section class="quiz-section">
         <div class="container">
-            <h2 class="section-title">🧪 Проверьте свои знания</h2>
+            <h2 class="section-title">🤔 Проверьте свои знания</h2>
             
             <div class="quiz-container">
                 <div class="quiz-item">
@@ -701,6 +670,7 @@
     <section class="questions-section">
         <div class="container">
             <h2 class="section-title">📝 Лист «Вопросы для хирурга»</h2>
+            <p style="margin-bottom: 30px; font-size: 1.2rem; color: #555;">Обратите внимание: ответы на эти вопросы могут различаться в зависимости от вашей индивидуальной ситуации и особенностей заболевания.</p>
             
             <div class="questions-container">
                 <div class="questions-category">
@@ -772,7 +742,6 @@
                     <h4>💡 Совет пациенту:</h4>
                     <p>Записывайте ответы хирурга, чтобы не забыть детали.</p>
                     <p>Не стесняйтесь задавать даже «простые» или «неловкие» вопросы — это важно для вашего здоровья.</p>
-                    <p>Можно взять с собой родственника или друга для поддержки и помощи в запоминании информации.</p>
                 </div>
             </div>
         </div>
