@@ -203,6 +203,184 @@
             max-height: 500px;
         }
         
+        /* Стили для блока тестирования */
+        .quiz-section {
+            background-color: var(--light-color);
+        }
+        
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .quiz-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow);
+        }
+        
+        .quiz-question {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .quiz-option {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .quiz-option:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .quiz-option.selected {
+            border-color: var(--primary-color);
+            background-color: rgba(44, 120, 115, 0.05);
+        }
+        
+        .quiz-option.correct {
+            border-color: #4CAF50;
+            background-color: rgba(76, 175, 80, 0.1);
+        }
+        
+        .quiz-option.incorrect {
+            border-color: #F44336;
+            background-color: rgba(244, 67, 54, 0.1);
+        }
+        
+        .option-letter {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-color: #eee;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        .quiz-option.selected .option-letter {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .quiz-option.correct .option-letter {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .quiz-option.incorrect .option-letter {
+            background-color: #F44336;
+            color: white;
+        }
+        
+        .explanation {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .explanation.show {
+            display: block;
+        }
+        
+        /* Стили для блока "Вопросы для хирурга" */
+        .questions-section {
+            background-color: white;
+        }
+        
+        .questions-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .questions-category {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .questions-category-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        
+        .questions-category-header:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .questions-category-header::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .questions-category-header.active::after {
+            transform: rotate(45deg);
+        }
+        
+        .questions-list {
+            background-color: white;
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            list-style-type: none;
+        }
+        
+        .questions-list.active {
+            padding: 20px;
+            max-height: 1000px;
+        }
+        
+        .questions-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .questions-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .patient-tip {
+            background-color: #fff9e6;
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        
+        .patient-tip h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
         footer {
             background: linear-gradient(135deg, var(--footer-color), var(--primary-color));
             color: white;
@@ -420,6 +598,164 @@
         </div>
     </section>
     
+    <!-- Новый блок тестирования -->
+    <section class="quiz-section">
+        <div class="container">
+            <h2 class="section-title">🧪 Проверьте свои знания</h2>
+            
+            <div class="quiz-container">
+                <div class="quiz-item">
+                    <div class="quiz-question">Почему пациенту могут предложить хирургическое лечение туберкулёза?</div>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">
+                            <span class="option-letter">A</span>
+                            <span class="option-text">Снизить риск повторного заболевания и при необходимости сократить курс лечения противотуберкулёзными препаратами</span>
+                        </div>
+                        <div class="quiz-option" data-correct="false">
+                            <span class="option-letter">B</span>
+                            <span class="option-text">Сразу полностью отказаться от препаратов</span>
+                        </div>
+                    </div>
+                    <div class="explanation">
+                        <p><strong>Правильный ответ — A.</strong> Операция снижает риск рецидива и при некоторых показаниях позволяет сократить курс лечения.</p>
+                    </div>
+                </div>
+                
+                <div class="quiz-item">
+                    <div class="quiz-question">Что реально происходит с лёгким после операции?</div>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">
+                            <span class="option-letter">A</span>
+                            <span class="option-text">Убирается очаг разрушенной ткани, который не участвует в дыхании, но может быть источником инфекции</span>
+                        </div>
+                        <div class="quiz-option" data-correct="false">
+                            <span class="option-letter">B</span>
+                            <span class="option-text">Лёгкое сразу полностью восстанавливается и работает как новое</span>
+                        </div>
+                    </div>
+                    <div class="explanation">
+                        <p><strong>Правильный ответ — A.</strong> Операция удаляет очаг болезни; лёгкое начинает работать эффективнее, но не становится «как новое».</p>
+                    </div>
+                </div>
+                
+                <div class="quiz-item">
+                    <div class="quiz-question">Почему операция нужна не всем пациентам?</div>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">
+                            <span class="option-letter">A</span>
+                            <span class="option-text">Потому что некоторые пациенты могут полностью вылечиться только лекарствами</span>
+                        </div>
+                        <div class="quiz-option" data-correct="false">
+                            <span class="option-letter">B</span>
+                            <span class="option-text">Потому что операция нужна всем без исключения</span>
+                        </div>
+                    </div>
+                    <div class="explanation">
+                        <p><strong>Правильный ответ — A.</strong> Операция показана только тем пациентам, у кого лекарства не дают полного эффекта.</p>
+                    </div>
+                </div>
+                
+                <div class="quiz-item">
+                    <div class="quiz-question">Какие положительные эффекты получает пациент после операции?</div>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="true">
+                            <span class="option-letter">A</span>
+                            <span class="option-text">Убирается очаг болезни, снижается риск рецидива, курс лечения может быть короче</span>
+                        </div>
+                        <div class="quiz-option" data-correct="false">
+                            <span class="option-letter">B</span>
+                            <span class="option-text">Лёгкое сразу становится «как новое» и можно отказаться от препаратов</span>
+                        </div>
+                    </div>
+                    <div class="explanation">
+                        <p><strong>Правильный ответ — A.</strong> Операция удаляет очаг болезни, снижает риск повторного заражения и облегчает лечение; лёгкое не становится «как новое».</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Новый блок "Вопросы для хирурга" -->
+    <section class="questions-section">
+        <div class="container">
+            <h2 class="section-title">📝 Лист «Вопросы для хирурга»</h2>
+            
+            <div class="questions-container">
+                <div class="questions-category">
+                    <div class="questions-category-header">1. Общие вопросы о необходимости операции</div>
+                    <ul class="questions-list">
+                        <li>Почему мне может понадобиться операция при туберкулёзе?</li>
+                        <li>Какие цели операции? (Что она исправляет, предотвращает или улучшает?)</li>
+                        <li>Есть ли альтернативы операции? Насколько они эффективны?</li>
+                        <li>Каковы риски и осложнения, связанные с операцией?</li>
+                    </ul>
+                </div>
+                
+                <div class="questions-category">
+                    <div class="questions-category-header">2. Подготовка к операции</div>
+                    <ul class="questions-list">
+                        <li>Нужно ли мне готовиться заранее? (анализы, обследования, лекарства)</li>
+                        <li>Как долго длится госпитализация и восстановление?</li>
+                        <li>Нужно ли заранее прекратить приём каких-либо лекарств?</li>
+                    </ul>
+                </div>
+                
+                <div class="questions-category">
+                    <div class="questions-category-header">3. Ход операции</div>
+                    <ul class="questions-list">
+                        <li>Как проходит операция? (краткое объяснение шагов)</li>
+                        <li>Сколько она длится?</li>
+                        <li>Какая анестезия используется? Есть ли риски?</li>
+                        <li>Кто будет в операционной команде?</li>
+                    </ul>
+                </div>
+                
+                <div class="questions-category">
+                    <div class="questions-category-header">4. После операции</div>
+                    <ul class="questions-list">
+                        <li>Что я почувствую сразу после операции?</li>
+                        <li>Будет ли боль? Как её контролируют?</li>
+                        <li>Какие ограничения в первые дни/недели после операции?</li>
+                        <li>Когда можно будет вернуться к обычной жизни?</li>
+                    </ul>
+                </div>
+                
+                <div class="questions-category">
+                    <div class="questions-category-header">5. Долгосрочные результаты</div>
+                    <ul class="questions-list">
+                        <li>Как операция повлияет на лёгкие и на здоровье в целом?</li>
+                        <li>Есть ли вероятность повторного заболевания или осложнений?</li>
+                        <li>Как будут контролироваться результаты операции после выписки?</li>
+                    </ul>
+                </div>
+                
+                <div class="questions-category">
+                    <div class="questions-category-header">6. Дополнительная поддержка</div>
+                    <ul class="questions-list">
+                        <li>Могу ли я поговорить с бывшими пациентами, которые уже прошли такую операцию?</li>
+                        <li>К кому можно обратиться, если появятся вопросы после выписки?</li>
+                    </ul>
+                </div>
+                
+                <div class="questions-category">
+                    <div class="questions-category-header">7. Финансовые и организационные вопросы</div>
+                    <ul class="questions-list">
+                        <li>Что покрывает страховка/бюджет поликлиники?</li>
+                        <li>Нужно ли что-то оплачивать дополнительно?</li>
+                        <li>Какой график посещений и обследований после операции?</li>
+                    </ul>
+                </div>
+                
+                <div class="patient-tip">
+                    <h4>💡 Совет пациенту:</h4>
+                    <p>Записывайте ответы хирурга, чтобы не забыть детали.</p>
+                    <p>Не стесняйтесь задавать даже «простые» или «неловкие» вопросы — это важно для вашего здоровья.</p>
+                    <p>Можно взять с собой родственника или друга для поддержки и помощи в запоминании информации.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <footer>
         <div class="container">
             <p><strong>Хирургическое лечение туберкулёза</strong></p>
@@ -430,6 +766,7 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Функционал для FAQ
             const faqQuestions = document.querySelectorAll('.faq-question');
             
             faqQuestions.forEach(question => {
@@ -447,6 +784,59 @@
                     if (!isActive) {
                         this.classList.add('active');
                         answer.classList.add('active');
+                    }
+                });
+            });
+            
+            // Функционал для тестирования
+            const quizOptions = document.querySelectorAll('.quiz-option');
+            
+            quizOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const quizItem = this.closest('.quiz-item');
+                    const explanation = quizItem.querySelector('.explanation');
+                    const isCorrect = this.getAttribute('data-correct') === 'true';
+                    
+                    // Снимаем выделение с других вариантов в этом вопросе
+                    quizItem.querySelectorAll('.quiz-option').forEach(opt => {
+                        opt.classList.remove('selected', 'correct', 'incorrect');
+                    });
+                    
+                    // Выделяем выбранный вариант
+                    this.classList.add('selected');
+                    
+                    // Показываем правильность ответа
+                    if (isCorrect) {
+                        this.classList.add('correct');
+                    } else {
+                        this.classList.add('incorrect');
+                        // Показываем правильный ответ
+                        quizItem.querySelector('.quiz-option[data-correct="true"]').classList.add('correct');
+                    }
+                    
+                    // Показываем объяснение
+                    explanation.classList.add('show');
+                });
+            });
+            
+            // Функционал для листа вопросов хирургу
+            const questionHeaders = document.querySelectorAll('.questions-category-header');
+            
+            questionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const list = this.nextElementSibling;
+                    const isActive = this.classList.contains('active');
+                    
+                    // Закрываем все открытые списки
+                    document.querySelectorAll('.questions-category-header.active').forEach(item => {
+                        item.classList.remove('active');
+                        item.nextElementSibling.classList.remove('active');
+                    });
+                    
+                    // Если текущий заголовок не был активен, открываем его
+                    if (!isActive) {
+                        this.classList.add('active');
+                        list.classList.add('active');
                     }
                 });
             });
